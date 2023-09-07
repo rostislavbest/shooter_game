@@ -1,11 +1,11 @@
 import pygame
 pygame.init()
 from random import *
-W= 700
-H =550
+W= 1700
+H =1550
 fon = pygame.transform.scale(pygame.image.load('galaxy.jpg'),(W,H))
 scr = pygame.display.set_mode((W,H))
-pygame.display.set_caption('Shooter')
+pygame.display.set_caption('Super Game')
 pygame.mixer.init()
 pygame.mixer.music.load('space.ogg')
 pygame.mixer.music.play()
@@ -32,7 +32,7 @@ class Asteroid():
             global asteroid_count
             asteroid_count+=1
 asteroids = []
-for el in range(5):
+for el in range(10):
     asteroid = Asteroid(randint(30,650),-10,50,50,'asteroid.png')
     asteroids.append(asteroid)
 
